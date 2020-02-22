@@ -30,11 +30,12 @@ ApplicationWindow {
             text: "CachceSize: " + sysinfo.cacheSize
         }
 
-        TextArea {      //Сделать обновляемым
+        TextArea {
             id: cpuMHz
             visible: true
             text: "CpuMHz: " + sysinfo.cpuMHz
         }
+
         /***
         TextArea{       //Сделать адаптируемым
             id: flags
@@ -43,5 +44,14 @@ ApplicationWindow {
             wrapMode: Text.WordWrap
         }
         */
+
+        Timer {
+            interval: 1000
+            running: true
+            repeat: true
+            onTriggered: {
+                cpuMHz.text = "CpuMHz: " + sysinfo.cpuMHz
+            }
+        }
     }
 }
