@@ -21,19 +21,19 @@ ApplicationWindow {
         TextArea {
             id: cpuname
             visible: true
-            text: "CpuName" + sysinfo.cpuName
+            text: "CPU Name: " + sysinfo.cpuName
         }
 
         TextArea {
             id: cachesize
             visible: true
-            text: "CachceSize: " + sysinfo.cacheSize
+            text: "Cachce Size: " + sysinfo.cacheSize + "KB"
         }
 
         TextArea {
             id: cpuMHz
             visible: true
-            text: "CpuMHz: " + sysinfo.cpuMHz
+            text: "CPU Frequency: " + sysinfo.cpuMHz + "MHz"    //ПРОБЛЕМА: Данный текст приходится менять в двух местах
         }
 
         /***
@@ -46,12 +46,13 @@ ApplicationWindow {
         */
 
         Timer {
-            interval: 1000
+            interval: 1000   //Сделать настраиваемым
             running: true
             repeat: true
             onTriggered: {
-                cpuMHz.text = "CpuMHz: " + sysinfo.cpuMHz
+                cpuMHz.text = "Cpu Frequency: " + sysinfo.cpuMHz + "MHz"
             }
         }
+
     }
 }

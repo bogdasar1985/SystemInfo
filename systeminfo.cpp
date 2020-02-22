@@ -21,22 +21,23 @@ QString SystemInfo::getCpuName()
     return res;
 }
 
-double SystemInfo::getCpuMHz()
+QString SystemInfo::getCpuMHz()
 {
     size_t sz = 0;
     char* str = NULL;
-    double result = -1;
+    char mhz[20];
     FILE* fl = fopen("/proc/cpuinfo", "r");
     while(getline(&str, &sz, fl) != -1)
     {
         if(strstr(str, "cpu MHz") != NULL)
         {
-            sscanf(str, "cpu MHz : %lf", &result);
+            sscanf(str, "cpu MHz : %s", mhz);
             break;
         }
     }
     free(str);
     fclose(fl);
+    QString result(mhz);
     return result;
 }
 

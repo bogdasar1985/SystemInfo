@@ -14,14 +14,14 @@ class SystemInfo : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString cpuName READ getCpuName)
-    Q_PROPERTY(double cpuMHz READ getCpuMHz NOTIFY cpuMHzChanged)
+    Q_PROPERTY(QString cpuMHz READ getCpuMHz NOTIFY cpuMHzChanged)
     Q_PROPERTY(int cacheSize READ getCacheSize)
     Q_PROPERTY(QString flags READ getFlags)
 
 public:
     explicit SystemInfo(QObject *parent = nullptr);
     QString getCpuName();
-    double getCpuMHz();
+    QString getCpuMHz();
     int getCacheSize();
     QString getFlags();
 
