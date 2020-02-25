@@ -17,6 +17,8 @@ SOURCES += src/main.cpp \
 
 RESOURCES += src/qml.qrc
 
+HEADERS += src/systeminfo.h
+
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
@@ -28,4 +30,3 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-HEADERS += src/systeminfo.h
