@@ -1,4 +1,3 @@
-//Comment
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QSysInfo>
