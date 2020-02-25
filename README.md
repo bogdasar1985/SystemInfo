@@ -1,6 +1,6 @@
 # SystemInfo
 SystemInfo is a simple program that displays information about your PC.
-
+[Image_of_UI](https://github.com/bogdasar1985/SystemInfo/blob/master/images/ui_screenshot.png)
 ## How to use?
 At the moment programm is not ready, but you can run:
 ```
