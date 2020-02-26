@@ -1,7 +1,7 @@
+//Сделать обновление данных через QEventLoop
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QSysInfo>
-#include <iostream>
 #include "systeminfo.h"
 int main(int argc, char *argv[])
 {
