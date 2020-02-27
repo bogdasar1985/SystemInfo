@@ -16,18 +16,18 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 #LINK_DIRECTORIES(/usr/local/lib/)
 
 set(SOURCES
-    src/main.cpp
-    src/systeminfo.cpp
+    src/sources/main.cpp
+    src/sources/systeminfo.cpp
 )
 
 set(HEADERS
-    src/systeminfo.h
+    src/headers/systeminfo.h
 )
 
 set(QML
-    src/qml.qrc
-    src/main.qml
-    src/CPU.qml
+    src/qml/qml.qrc
+    src/qml/main.qml
+    src/qml/CPU.qml
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${QML})
