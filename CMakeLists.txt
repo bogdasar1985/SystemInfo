@@ -27,6 +27,7 @@ set(HEADERS
 set(QML
     src/qml.qrc
     src/main.qml
+    src/CPU.qml
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${QML})

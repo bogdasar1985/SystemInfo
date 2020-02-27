@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Controls 1.4
 import QtQuick.Controls.Material 2.12
 import QtQuick.Controls.Styles 1.4
 import SystemInfo 1.0
@@ -16,44 +17,29 @@ ApplicationWindow {
     SystemInfo {
         id:sysinfo
     }
-    Column {
-        spacing: 1
-        anchors.centerIn: parent
-        TextArea {
-            id: cpuname
-            visible: true
-            text: "CPU Name: " + sysinfo.cpuName
+
+    TabView{
+        id: tabview
+        anchors.fill: parent
+        Tab{
+            title: "CPU"
+            CPU{}
         }
 
-        TextArea {
-            id: cachesize
-            visible: true
-            text: "Cachce Size: " + sysinfo.cacheSize + "KB"
+        Tab{
+            title: "RAM"
         }
 
-        TextArea {
-            id: cpuMHz
-            visible: true
-            text: "CPU Frequency: " + sysinfo.cpuMHz + "MHz"    //ПРОБЛЕМА: Данный текст приходится менять в двух местах
+        Tab{
+            title: "Network"
         }
 
-        /***
-        TextArea{       //Сделать адаптируемым
-            id: flags
-            visible: true
-            text: "Flags: " + sysinfo.flags
-            wrapMode: Text.WordWrap
-        }
-        */
-
-        Timer {
-            interval: 500   //Сделать настраиваемым
-            running: true
-            repeat: true
-            onTriggered: {
-                cpuMHz.text = "Cpu Frequency: " + sysinfo.cpuMHz + "MHz"
-            }
+        Tab{
+            title: "HDD"
         }
 
+        Tab{
+            title: "Temperature"
+        }
     }
 }
