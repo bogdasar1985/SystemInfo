@@ -16,12 +16,12 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 #LINK_DIRECTORIES(/usr/local/lib/)
 
 set(SOURCES
-    src/sources/main.cpp
-    src/sources/systeminfo.cpp
+    src/main.cpp
+    src/systeminfo.cpp
 )
 
 set(HEADERS
-    src/headers/systeminfo.h
+    src/systeminfo.h
 )
 
 set(QML
