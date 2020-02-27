@@ -1,4 +1,4 @@
-#include "systeminfo.h"
+#include "../headers/systeminfo.h"
 
 SystemInfo::SystemInfo(QObject *parent) : QObject(parent)   {};
 
