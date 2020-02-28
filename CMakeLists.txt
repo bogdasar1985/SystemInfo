@@ -17,11 +17,11 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 
 set(SOURCES
     src/main.cpp
-    src/systeminfo.cpp
+    src/cpuinfo.cpp
 )
 
 set(HEADERS
-    src/systeminfo.h
+    src/cpuinfo.h
 )
 
 set(QML

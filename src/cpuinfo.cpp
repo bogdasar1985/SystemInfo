@@ -1,8 +1,8 @@
-#include "systeminfo.h"
+#include "cpuinfo.h"
 
-SystemInfo::SystemInfo(QObject *parent) : QObject(parent)   {};
+CpuInfo::CpuInfo(QObject *parent) : QObject(parent)   {};
 
-QString SystemInfo::getCpuName()
+QString CpuInfo::getCpuName()
 {
     size_t sz = 0;
     char* result = NULL;
@@ -21,7 +21,7 @@ QString SystemInfo::getCpuName()
     return res;
 }
 
-QString SystemInfo::getCpuMHz()
+QString CpuInfo::getCpuMHz()
 {
     size_t sz = 0;
     char* str = NULL;
@@ -41,7 +41,7 @@ QString SystemInfo::getCpuMHz()
     return result;
 }
 
-int SystemInfo::getCacheSize()
+int CpuInfo::getCacheSize()
 {
     size_t sz = 0;
     char* str = NULL;
@@ -60,7 +60,7 @@ int SystemInfo::getCacheSize()
     return result;
 }
 
-QString SystemInfo::getFlags()
+QString CpuInfo::getFlags()
 {
     size_t sz = 0;
     char* result = NULL;

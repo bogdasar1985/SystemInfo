@@ -2,7 +2,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QSysInfo>
-#include "systeminfo.h"
+#include "cpuinfo.h"
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
 
-    qmlRegisterType<SystemInfo>("SystemInfo", 1, 0, "SystemInfo");
+    qmlRegisterType<CpuInfo>("CpuInfo", 1, 0, "CpuInfo");
 
     engine.load(url);
 

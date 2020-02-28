@@ -10,7 +10,7 @@
 #include <QObject>
 #include <QString>
 
-class SystemInfo : public QObject
+class CpuInfo : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString cpuName READ getCpuName)
@@ -19,7 +19,7 @@ class SystemInfo : public QObject
     Q_PROPERTY(QString flags READ getFlags)
 
 public:
-    explicit SystemInfo(QObject *parent = nullptr);
+    explicit CpuInfo(QObject *parent = nullptr);
     QString getCpuName();
     QString getCpuMHz();
     int getCacheSize();

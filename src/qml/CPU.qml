@@ -1,25 +1,31 @@
 import QtQuick 2.0
-import QtQuick.Controls 2.14
+import QtQuick.Controls 2.12
+import CpuInfo 1.0
 Item{
+
+    CpuInfo{
+        id: cpuinfo
+    }
+
     Column {
         spacing: 1
         anchors.centerIn: parent
         TextArea {
             id: cpuname
             visible: true
-            text: "CPU Name: " + sysinfo.cpuName
+            text: "CPU Name: " + cpuinfo.cpuName
         }
 
         TextArea {
             id: cachesize
             visible: true
-            text: "Cachce Size: " + sysinfo.cacheSize + "KB"
+            text: "Cachce Size: " + cpuinfo.cacheSize + "KB"
         }
 
         TextArea {
             id: cpuMHz
             visible: true
-            text: "CPU Frequency: " + sysinfo.cpuMHz + "MHz"    //ПРОБЛЕМА: Данный текст приходится менять в двух местах
+            text: "CPU Frequency: " + cpuinfo.cpuMHz + "MHz"    //ПРОБЛЕМА: Данный текст приходится менять в двух местах
         }
         /***
         TextArea{       //Сделать адаптируемым
@@ -35,7 +41,7 @@ Item{
             running: true
             repeat: true
             onTriggered: {
-                cpuMHz.text = "Cpu Frequency: " + sysinfo.cpuMHz + "MHz"
+                cpuMHz.text = "Cpu Frequency: " + cpuinfo.cpuMHz + "MHz"
             }
         }
     }
