@@ -2,7 +2,7 @@
 
 RamInfo::RamInfo(QObject *parent) : QObject(parent){}
 
-int RamInfo::getTotalRam() const
+int RamInfo::getTotalRam()
 {
     size_t sz = 0;
     char* buf = NULL;
@@ -20,5 +20,3 @@ int RamInfo::getTotalRam() const
     free(buf);
     return result;
 };
-
-

@@ -2,7 +2,7 @@
 
 CpuInfo::CpuInfo(QObject *parent) : QObject(parent){};
 
-QString CpuInfo::getCpuName() const
+QString CpuInfo::getCpuName()
 {
     size_t sz = 0;
     char* result = NULL;
@@ -41,7 +41,7 @@ QString CpuInfo::getCpuMHz()
     return result;
 }
 
-int CpuInfo::getCacheSize() const
+int CpuInfo::getCacheSize()
 {
     size_t sz = 0;
     char* str = NULL;
@@ -60,7 +60,7 @@ int CpuInfo::getCacheSize() const
     return result;
 }
 
-QString CpuInfo::getFlags() const
+QString CpuInfo::getFlags()
 {
     size_t sz = 0;
     char* result = NULL;

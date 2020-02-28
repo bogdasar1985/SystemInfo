@@ -9,7 +9,7 @@ class RamInfo : public QObject
     Q_PROPERTY(int totalRam READ getTotalRam)
 public:
     explicit RamInfo(QObject *parent = nullptr);
-    int getTotalRam() const;
+    int getTotalRam();
 };
 
 #endif // RAMINFO_H
