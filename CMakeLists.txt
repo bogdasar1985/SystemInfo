@@ -18,16 +18,19 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 set(SOURCES
     src/main.cpp
     src/cpuinfo.cpp
+    src/raminfo.cpp
 )
 
 set(HEADERS
     src/cpuinfo.h
+    src/raminfo.h
 )
 
 set(QML
     src/qml/qml.qrc
     src/qml/main.qml
     src/qml/CPU.qml
+    src/qml/RAM.qml
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS} ${QML})

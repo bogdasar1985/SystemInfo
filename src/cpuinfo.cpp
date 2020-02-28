@@ -1,8 +1,8 @@
 #include "cpuinfo.h"
 
-CpuInfo::CpuInfo(QObject *parent) : QObject(parent)   {};
+CpuInfo::CpuInfo(QObject *parent) : QObject(parent){};
 
-QString CpuInfo::getCpuName()
+QString CpuInfo::getCpuName() const
 {
     size_t sz = 0;
     char* result = NULL;
@@ -41,7 +41,7 @@ QString CpuInfo::getCpuMHz()
     return result;
 }
 
-int CpuInfo::getCacheSize()
+int CpuInfo::getCacheSize() const
 {
     size_t sz = 0;
     char* str = NULL;
@@ -60,7 +60,7 @@ int CpuInfo::getCacheSize()
     return result;
 }
 
-QString CpuInfo::getFlags()
+QString CpuInfo::getFlags() const
 {
     size_t sz = 0;
     char* result = NULL;

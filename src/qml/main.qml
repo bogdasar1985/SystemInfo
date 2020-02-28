@@ -23,6 +23,7 @@ ApplicationWindow {
 
         Tab{
             title: "RAM"
+            RAM{}
         }
 
         Tab{

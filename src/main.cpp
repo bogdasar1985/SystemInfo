@@ -1,8 +1,7 @@
-//Сделать обновление данных через QEventLoop
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <QSysInfo>
 #include "cpuinfo.h"
+#include "raminfo.h"
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -13,6 +12,7 @@ int main(int argc, char *argv[])
     const QUrl url(QStringLiteral("qrc:/main.qml"));
 
     qmlRegisterType<CpuInfo>("CpuInfo", 1, 0, "CpuInfo");
+    qmlRegisterType<RamInfo>("RamInfo",1,0, "RamInfo");
 
     engine.load(url);
 

@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>CPU.qml</file>
+        <file>RAM.qml</file>
     </qresource>
 </RCC>

@@ -20,10 +20,10 @@ class CpuInfo : public QObject
 
 public:
     explicit CpuInfo(QObject *parent = nullptr);
-    QString getCpuName();
+    QString getCpuName() const;
     QString getCpuMHz();
-    int getCacheSize();
-    QString getFlags();
+    int getCacheSize() const;
+    QString getFlags() const;
 
 signals:
     void cpuMHzChanged();
