@@ -2,7 +2,6 @@ import QtQuick 2.0
 import QtQuick.Controls 2.12
 import CpuInfo 1.0
 Item{
-
     CpuInfo{
         id: cpuinfo
     }
