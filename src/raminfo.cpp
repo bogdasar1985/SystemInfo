@@ -1,5 +1,4 @@
 #include "raminfo.h"
-
 RamInfo::RamInfo(QObject *parent) : QObject(parent){}
 
 int RamInfo::getTotalRam()
