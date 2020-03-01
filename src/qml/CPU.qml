@@ -7,25 +7,26 @@ Item{
     }
 
     Column {
-        spacing: 1
+        spacing: 6
         anchors.centerIn: parent
-        TextArea {
+        Text {
             id: cpuname
             visible: true
             text: "CPU Name: " + cpuinfo.cpuName
         }
 
-        TextArea {
+        Text {
             id: cachesize
             visible: true
             text: "Cachce Size: " + cpuinfo.cacheSize + "KB"
         }
 
-        TextArea {
+        Text {
             id: cpuMHz
             visible: true
             text: "CPU Frequency: " + cpuinfo.cpuMHz + "MHz"    //ПРОБЛЕМА: Данный текст приходится менять в двух местах
         }
+
         /***
         TextArea{       //Сделать адаптируемым
            id: flags

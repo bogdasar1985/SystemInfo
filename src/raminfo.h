@@ -2,7 +2,6 @@
 #define RAMINFO_H
 
 #include <QObject>
-
 class RamInfo : public QObject
 {
     Q_OBJECT

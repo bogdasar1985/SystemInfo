@@ -9,7 +9,6 @@
 #define SYSTEMINFO_H
 #include <QObject>
 #include <QString>
-
 class CpuInfo : public QObject
 {
     Q_OBJECT

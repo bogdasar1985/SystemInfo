@@ -9,7 +9,7 @@ Item {
     Column {
         spacing: 1
         anchors.centerIn: parent
-        TextArea {
+        Text {
             id: ramtotal
             visible: true
             text: "RAM Total: " + raminfo.totalRam + " KB"
